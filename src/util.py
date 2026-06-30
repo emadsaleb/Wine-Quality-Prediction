@@ -32,7 +32,7 @@ def evaluate_models(X_train, y_train, X_test, y_test, models, param):
 
             para = param.get(model_name, {})
 
-            # 🔥 Apply GridSearch only if params exist
+            
             if para:
                 gs = GridSearchCV(model, para, cv=3)
                 gs.fit(X_train, y_train)
@@ -46,7 +46,6 @@ def evaluate_models(X_train, y_train, X_test, y_test, models, param):
             y_train_pred = model.predict(X_train)
             y_test_pred = model.predict(X_test)
 
-            # 🔥 FIX: Use accuracy instead of r2
             train_model_score = accuracy_score(y_train, y_train_pred)
             test_model_score = accuracy_score(y_test, y_test_pred)
 
