@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wine Quality Prediction</title>
+</head>
+<body>
+
+<h1>Wine Quality Prediction 🍷</h1>
+
+<form action="/predictdata" method="POST">
+
+    <input type="number" step="any" name="fixed_acidity"
+    value="{{ form_data.fixed_acidity if form_data else '' }}"
+    placeholder="fixed acidity"><br><br>
+
+    <input type="number" step="any" name="volatile_acidity"
+    value="{{ form_data.volatile_acidity if form_data else '' }}"
+    placeholder="volatile acidity"><br><br>
+
+    <input type="number" step="any" name="citric_acid"
+    value="{{ form_data.citric_acid if form_data else '' }}"
+    placeholder="citric acid"><br><br>
+
+    <input type="number" step="any" name="residual_sugar"
+    value="{{ form_data.residual_sugar if form_data else '' }}"
+    placeholder="residual sugar"><br><br>
+
+    <input type="number" step="any" name="chlorides"
+    value="{{ form_data.chlorides if form_data else '' }}"
+    placeholder="chlorides"><br><br>
+
+    <input type="number" step="any" name="free_sulfur_dioxide"
+    value="{{ form_data.free_sulfur_dioxide if form_data else '' }}"
+    placeholder="free sulfur dioxide"><br><br>
+
+    <input type="number" step="any" name="total_sulfur_dioxide"
+    value="{{ form_data.total_sulfur_dioxide if form_data else '' }}"
+    placeholder="total sulfur dioxide"><br><br>
+
+    <input type="number" step="any" name="density"
+    value="{{ form_data.density if form_data else '' }}"
+    placeholder="density"><br><br>
+
+    <input type="number" step="any" name="ph"
+    value="{{ form_data.ph if form_data else '' }}"
+    placeholder="pH"><br><br>
+
+    <input type="number" step="any" name="sulphates"
+    value="{{ form_data.sulphates if form_data else '' }}"
+    placeholder="sulphates"><br><br>
+
+    <input type="number" step="any" name="alcohol"
+    value="{{ form_data.alcohol if form_data else '' }}"
+    placeholder="alcohol"><br><br>
+
+    <button type="submit">Predict</button>
+</form>
+
+<br>
+
+{% if results %}
+    <h2>Result: {{ results }}</h2>
+{% endif %}
+
+</body>
+</html>

@@ -42,7 +42,7 @@ class CustomData:
         free_sulfur_dioxide: float,
         total_sulfur_dioxide: float,
         density: float,
-        pH: float,
+        ph: float,
         sulphates: float,
         alcohol: float
     ):
@@ -54,7 +54,7 @@ class CustomData:
         self.free_sulfur_dioxide = free_sulfur_dioxide
         self.total_sulfur_dioxide = total_sulfur_dioxide
         self.density = density
-        self.pH = pH
+        self.ph = ph
         self.sulphates = sulphates
         self.alcohol = alcohol
 
@@ -69,7 +69,7 @@ class CustomData:
                 "free_sulfur_dioxide": [self.free_sulfur_dioxide],
                 "total_sulfur_dioxide": [self.total_sulfur_dioxide],
                 "density": [self.density],
-                "pH": [self.pH],
+                "ph": [self.ph],
                 "sulphates": [self.sulphates],
                 "alcohol": [self.alcohol]
             }
